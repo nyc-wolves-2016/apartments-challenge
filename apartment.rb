@@ -19,7 +19,7 @@ class Apartment
   end
 
   def bedroom_count
-    0
+    @rooms.select { |room| room.name == 'bedroom'}.length
   end
 
 end

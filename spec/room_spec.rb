@@ -4,7 +4,7 @@ describe Room do
 
   let(:sqft) {50 + rand(1..10) * 10}
   let(:first_room) {Room.new(name: "lounge", sqft: sqft, window_count: rand(0..2))}
-  let(:second_room) {Room.new}
+  let(:second_room) {Room.new({})}
 
   describe 'attributes' do
 

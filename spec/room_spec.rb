@@ -1,4 +1,5 @@
 require_relative '../room.rb'
+require 'pry'
 
 describe Room do
 

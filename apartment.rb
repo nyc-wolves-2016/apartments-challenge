@@ -18,4 +18,8 @@ class Apartment
     self.monthly_rent / total_sqft.to_f 
   end
 
+  def bedroom_count
+    0
+  end
+
 end

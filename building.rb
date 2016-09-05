@@ -25,4 +25,9 @@ class Building
     relevant_apartments = @apartments.select { |apartment| apartment.bedroom_count == count }
     relevant_apartments.first if relevant_apartments.length == 1
   end
+
+  def total_sqft
+    @apartments.reduce(0) { |sum, apartment| sum + apartment.total_sqft }
+  end
+
 end

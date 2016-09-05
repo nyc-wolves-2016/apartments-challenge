@@ -1,4 +1,8 @@
+require_relative 'total_sqft'
+
+
 class Building
+  include TotalSquareFeet
   attr_reader :address, :apartments
 
   def initialize(args={})
@@ -26,8 +30,8 @@ class Building
     relevant_apartments.first if relevant_apartments.length == 1
   end
 
-  def total_sqft
-    @apartments.reduce(0) { |sum, apartment| sum + apartment.total_sqft }
+  def contained_areas
+    self.apartments
   end
 
 end

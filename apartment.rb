@@ -1,4 +1,8 @@
+require_relative 'total_sqft'
+
 class Apartment
+  include TotalSquareFeet
+
   attr_reader :rooms, :monthly_rent
   def initialize(args={})
     @number = args[:number]
@@ -10,8 +14,8 @@ class Apartment
     @rooms.length
   end
 
-  def total_sqft
-    @rooms.reduce(0) { |sum, room| sum + room.sqft }
+  def contained_areas
+    self.rooms
   end
 
   def price_per_sqft

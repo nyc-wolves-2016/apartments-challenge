@@ -19,7 +19,7 @@ describe Room do
     end
 
     it "has sqft" do
-      expect(first_room.sqft).to eq sqft
+      expect(first_room.total_sqft).to eq sqft
     end
 
     it "has default value for name" do
@@ -27,7 +27,7 @@ describe Room do
     end
 
     it "has default value for sqft" do
-      expect(second_room.sqft).to eq 120
+      expect(second_room.total_sqft).to eq 120
     end
   end
 

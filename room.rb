@@ -6,7 +6,6 @@ class Room
     @name = args.fetch(:name, "") {'bedroom'}
     @sqft = args.fetch(:sqft, "") {120}
     @window_count = args.fetch(:window_count, "") 
-
   end   
 
 end

@@ -8,11 +8,7 @@ class Apartment
   end 
 
   def total_sqft
-    total_sqft = []
-    @rooms.each do |room|
-      total_sqft << room.sqft
-    end  
-    total_sqft.reduce(:+)
+    @rooms.inject(0) {|sum, room| sum + room.sqft}
   end   
 
   def price_per_sqft
@@ -28,16 +24,3 @@ class Apartment
   end 
 end
 
-
-  # describe '#bedroom_count' do
-  #     it 'return number of bedroom' do
-  #       expect(apartment.bedroom_count).to eq 0
-  #     end
-
-
-# first_room= {Room.new(name: 'kitchen', sqft: 120, window_count: rand(0..2))}
-# second_room = {Room.new(name: 'lounge', sqft: 380, window_count: rand(0..2))}
-
-# generate_rooms = [first_room, second_room]
-
-# apartment = { Apartment.new(number: '10#7', rooms: generate_rooms, monthly_rent: 1450) }

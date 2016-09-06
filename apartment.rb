@@ -21,6 +21,6 @@ class Apartment
 	end
 
 	def bedroom_count
-		this = @rooms.select {|room| room.name == 'bedroom'}.count
+		@rooms.select {|room| room.name == 'bedroom'}.count
 	end
 end

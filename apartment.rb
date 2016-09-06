@@ -22,7 +22,7 @@ class Apartment
 
 
 	def price_per_sqft
-		self.monthly_rent/ self.total_sqft.to_f
+		monthly_rent/ total_sqft.to_f
 	end
 
 	def room_count
@@ -30,6 +30,6 @@ class Apartment
 	end
 
 	def bedroom_count
-		@rooms.count('bedrooom')
+		@rooms.count {|room| room.name == 'bedrooom'}
 	end
 end

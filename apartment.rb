@@ -8,7 +8,7 @@ attr_reader :number, :rooms, :monthly_rent
   end
 
   def total_sqft
-    rooms.inject(0) {|sum, room| sum + room.sqft}
+    rooms.inject(0) { |sum, room| sum + room.sqft}
   end
 
   def price_per_sqft
@@ -20,6 +20,6 @@ attr_reader :number, :rooms, :monthly_rent
   end
 
   def bedroom_count
-    rooms.count {|rooms| rooms.name == 'bedroom'}
+    rooms.count { |rooms| rooms.name == 'bedroom'}
   end
 end
